@@ -89,24 +89,5 @@
         }
       ]
     }
-  ]
-},
-        {
-          "Id": 10,
-          "text": "What's the biggest threat to our family staying united in business?",
-          "description": "Identify the most significant risks that could divide your family or damage the business."
-        },
-        {
-          "Id": 11,
-          "text": "Where are we strong—and where are we vulnerable—when it comes to people, money, skills, and relationships?",
-          "description": "Conduct an honest assessment of your family business's strengths and weaknesses."
-        },
-        {
-          "Id": 12,
-          "text": "Who makes the tough calls in our family business today? Is that clear—and is it working?",
-          "description": "Evaluate your current decision-making structure and its effectiveness."
-        }
-      
 ]
-    
-  
+}]
