@@ -12,52 +12,10 @@ import ParticipantDetailPage from "@/components/pages/ParticipantDetailPage"
 import { useCurrentUser } from "@/hooks/useAuth"
 
 function App() {
-  const { currentUser } = useCurrentUser()
-
-  if (!currentUser) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50">
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="*" element={<Navigate to="/login" replace />} />
-        </Routes>
-        <ToastContainer
-          position="top-right"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          className="z-50"
-        />
-      </div>
-    )
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50">
       <Router>
-        <Layout>
-          <AnimatePresence mode="wait">
-            <Routes>
-              <Route path="/" element={<Navigate to="/dashboard" replace />} />
-              <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/onboarding" element={<OnboardingPage />} />
-              <Route path="/pillar/:pillarId" element={<PillarPage />} />
-              <Route path="/export" element={<ExportPage />} />
-              {currentUser.role === "admin" && (
-                <>
-                  <Route path="/admin" element={<AdminPage />} />
-                  <Route path="/admin/participant/:participantId" element={<ParticipantDetailPage />} />
-                </>
-              )}
-              <Route path="*" element={<Navigate to="/dashboard" replace />} />
-            </Routes>
-          </AnimatePresence>
-        </Layout>
+        <AppRoutes />
       </Router>
       <ToastContainer
         position="top-right"
@@ -72,6 +30,40 @@ function App() {
         className="z-50"
       />
     </div>
+  )
+}
+
+function AppRoutes() {
+  const { currentUser } = useCurrentUser()
+
+  if (!currentUser) {
+    return (
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
+    )
+  }
+
+  return (
+    <Layout>
+      <AnimatePresence mode="wait">
+        <Routes>
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/onboarding" element={<OnboardingPage />} />
+          <Route path="/pillar/:pillarId" element={<PillarPage />} />
+          <Route path="/export" element={<ExportPage />} />
+          {currentUser.role === "admin" && (
+            <>
+              <Route path="/admin" element={<AdminPage />} />
+              <Route path="/admin/participant/:participantId" element={<ParticipantDetailPage />} />
+            </>
+          )}
+          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        </Routes>
+      </AnimatePresence>
+    </Layout>
   )
 }
 
