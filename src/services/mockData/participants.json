@@ -1,0 +1,60 @@
+{
+  "profiles": [
+    {
+      "userId": "1",
+      "fullName": "Alex Thompson",
+      "phone": "+1 (555) 123-4567",
+      "businessName": "Thompson & Sons Manufacturing",
+      "position": "CEO & Owner",
+      "otherOwners": "Michael Thompson (son), Jennifer Thompson (daughter)",
+      "businessType": "Manufacturing",
+      "yearsInBusiness": 25,
+      "annualRevenue": "$5M - $10M",
+      "location": "Detroit, Michigan",
+      "email": "participant@demo.com",
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "userId": "3",
+      "fullName": "John Smith",
+      "phone": "+1 (555) 234-5678",
+      "businessName": "Smith Family Restaurants",
+      "position": "Founder & Chairman",
+      "otherOwners": "Mary Smith (wife), David Smith (son), Lisa Smith-Brown (daughter)",
+      "businessType": "Hospitality/Tourism",
+      "yearsInBusiness": 35,
+      "annualRevenue": "$10M - $50M",
+      "location": "Austin, Texas",
+      "email": "john.smith@demo.com",
+      "createdAt": "2024-02-01T12:00:00Z"
+    },
+    {
+      "userId": "4",
+      "fullName": "Sarah Johnson",
+      "phone": "+1 (555) 345-6789",
+      "businessName": "Johnson Construction Co",
+      "position": "President",
+      "otherOwners": "Robert Johnson (father), Mark Johnson (brother)",
+      "businessType": "Construction",
+      "yearsInBusiness": 42,
+      "annualRevenue": "$5M - $10M",
+      "location": "Denver, Colorado",
+      "email": "sarah.johnson@demo.com",
+      "createdAt": "2024-02-10T14:30:00Z"
+    },
+    {
+      "userId": "5",
+      "fullName": "Mike Davis",
+      "phone": "+1 (555) 456-7890",
+      "businessName": "Davis Tech Solutions",
+      "position": "CTO & Co-Founder",
+      "otherOwners": "Patricia Davis (wife), Kevin Davis (brother)",
+      "businessType": "Technology/Software",
+      "yearsInBusiness": 12,
+      "annualRevenue": "$1M - $5M",
+      "location": "Seattle, Washington",
+      "email": "mike.davis@demo.com",
+      "createdAt": "2024-02-15T16:45:00Z"
+    }
+  ]
+}
