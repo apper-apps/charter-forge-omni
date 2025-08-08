@@ -48,9 +48,9 @@ export function usePillarData(userId) {
     }
   }
 
-  const calculateCompletion = (pillar) => {
-    if (!pillar || !pillar.responses) return 0
-    const totalQuestions = 3
+const calculateCompletion = (pillar) => {
+    if (!pillar || !pillar.responses || !pillar.questions) return 0
+    const totalQuestions = pillar.questions.length
     const answeredQuestions = Object.values(pillar.responses).filter(response => 
       response && response.trim().length > 0
     ).length

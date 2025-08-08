@@ -1,76 +1,96 @@
+[
 {
   "pillars": [
     {
       "Id": 1,
       "title": "Reason to Begin",
-      "description": "Why Are We in Business Together? - Purpose & Values",
+      "description": "Why Are We in Business Together? Purpose & values - What was the original heartbeat behind this business?",
       "questions": [
         {
           "Id": 1,
-          "text": "What was the original heartbeat behind this business? Why did we start—or why are we still here?",
-          "description": "Reflect on the founding vision and what continues to drive your family business forward."
+          "text": "Why did we start—or why are we still here?",
+          "description": "What was the original heartbeat behind this business? What drove the initial decision to begin this venture?"
         },
         {
-          "Id": 2, 
-          "text": "If your children or grandchildren asked, \"Why does our family own this business?\"—what would you say?",
-          "description": "Think about how you would explain the deeper meaning of your business to the next generation."
+          "Id": 2,
+          "text": "If your children or grandchildren asked, 'Why does our family own this business?'—what would you say?",
+          "description": "Think about the legacy and meaning you want to pass down. What story would you tell about the purpose of this business?"
         },
         {
           "Id": 3,
           "text": "What values must we never compromise, even when things get tough?",
-          "description": "Identify the core principles that define who you are as a family business."
+          "description": "Identify the core principles that define who you are as a family business. These are the non-negotiables that guide every decision."
         }
       ]
     },
     {
       "Id": 2,
-      "title": "Business Type", 
-      "description": "End Game Thinking - Ownership & Future",
+      "title": "Business Type",
+      "description": "End Game Thinking - Ownership & future. Do I want us to keep this business for generations, or prepare to sell one day?",
       "questions": [
         {
-          "Id": 4,
+          "Id": 1,
           "text": "Do I want us to keep this business for generations, or prepare to sell one day? Why?",
-          "description": "Consider your long-term vision for the business and what success looks like for your family."
+          "description": "Consider your long-term vision for the business. Is this a legacy to preserve or an investment to eventually realize?"
         },
         {
-          "Id": 5,
+          "Id": 2,
           "text": "What kind of role do I want—operator, owner, investor, supporter?",
-          "description": "Think about your ideal involvement level and how it may evolve over time."
+          "description": "Think about your desired level of involvement in the business. Are you hands-on, strategic oversight, or passive investment?"
         },
         {
-          "Id": 6,
+          "Id": 3,
           "text": "Who should be allowed to own shares—and who shouldn't? Where do I draw the line, and why?",
-          "description": "Define clear boundaries about ownership participation and the reasoning behind them."
+          "description": "Define the boundaries for ownership participation. Consider family members, employees, and external parties."
         }
       ]
     },
     {
       "Id": 3,
       "title": "Expectations",
-      "description": "The Three Circles & Beyond - Roles & Responsibility", 
+      "description": "The Three Circles & Beyond - Roles & responsibility. Where do I sit today—Family, Business, Ownership?",
       "questions": [
         {
-          "Id": 7,
+          "Id": 1,
           "text": "Where do I sit today—Family, Business, Ownership? Am I clear about that?",
-          "description": "Map your current position across the three circles of family business and assess your clarity."
+          "description": "Identify your current roles in the three circles of family business. You may wear multiple hats—be specific about each."
         },
         {
-          "Id": 8,
+          "Id": 2,
           "text": "Do I believe we have a clear succession plan—or are we hoping things just work out?",
-          "description": "Honestly evaluate your current succession planning and identify gaps that need attention."
+          "description": "Assess the current state of succession planning. Be honest about whether you have a real plan or just hopes and assumptions."
         },
         {
-          "Id": 9,
+          "Id": 3,
           "text": "What do I expect from other family members—and what do I think they expect of me?",
-          "description": "Examine mutual expectations and potential misalignments within the family."
+          "description": "Consider the mutual expectations within your family business. Include both explicit agreements and unspoken assumptions."
         }
       ]
     },
     {
       "Id": 4,
       "title": "Extinction",
-      "description": "What Could Go Wrong? - Risk & Resilience",
+      "description": "What Could Go Wrong? Risk & resilience. What's the biggest threat to our family staying united in business?",
       "questions": [
+        {
+          "Id": 1,
+          "text": "What's the biggest threat to our family staying united in business?",
+          "description": "Identify the primary risks that could fracture your family business relationships. Consider both business and family dynamics."
+        },
+        {
+          "Id": 2,
+          "text": "Where are we strong—and where are we vulnerable—when it comes to people, money, skills, and relationships?",
+          "description": "Conduct an honest assessment of your family business strengths and weaknesses across all critical areas."
+        },
+        {
+          "Id": 3,
+          "text": "Who makes the tough calls in our family business today?",
+          "description": "Identify the decision-making authority for difficult situations. Consider both formal structures and informal influence."
+        }
+      ]
+    }
+  ]
+},
         {
           "Id": 10,
           "text": "What's the biggest threat to our family staying united in business?",
@@ -86,7 +106,7 @@
           "text": "Who makes the tough calls in our family business today? Is that clear—and is it working?",
           "description": "Evaluate your current decision-making structure and its effectiveness."
         }
-      ]
-    }
-  ]
-}
+      
+]
+    
+  
