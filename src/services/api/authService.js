@@ -8,23 +8,32 @@ class AuthService {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
 
-  async login(email, password) {
+async login(email, password) {
     await this.delay()
+    
+    console.log('Login attempt:', { email, availableUsers: authData.users.map(u => u.email) })
     
     const user = authData.users.find(u => 
       u.email.toLowerCase() === email.toLowerCase() && u.password === password
     )
     
     if (!user) {
+      console.error('Login failed:', { email, password: password ? 'provided' : 'missing' })
       throw new Error("Invalid email or password")
     }
 
-    const { password: _, ...userWithoutPassword } = user
+    // Ensure ID is integer for consistency
+    const normalizedUser = {
+      ...user,
+      Id: typeof user.Id === 'string' ? parseInt(user.Id, 10) : user.Id
+    }
+
+    const { password: _, ...userWithoutPassword } = normalizedUser
     localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(userWithoutPassword))
     
+    console.log('Login successful:', { userId: userWithoutPassword.Id, role: userWithoutPassword.role })
     return userWithoutPassword
   }
-
   async logout() {
     await this.delay(200)
     localStorage.removeItem(CURRENT_USER_KEY)

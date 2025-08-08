@@ -13,15 +13,23 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false)
   const { login } = useCurrentUser()
 
-  const handleLogin = async (e) => {
+const handleLogin = async (e) => {
     e.preventDefault()
+    
+    if (!email || !password) {
+      toast.error("Please enter both email and password")
+      return
+    }
+
     setLoading(true)
 
     try {
-      await login(email, password)
-      toast.success("Welcome to Charter Forge!")
+      console.log('Attempting login with:', { email })
+      const user = await login(email, password)
+      toast.success(`Welcome to Charter Forge, ${user.role}!`)
     } catch (error) {
-      toast.error(error.message)
+      console.error('Login error:', error)
+      toast.error(error.message || "Login failed. Please try again.")
     } finally {
       setLoading(false)
     }

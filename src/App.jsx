@@ -34,7 +34,16 @@ function App() {
 }
 
 function AppRoutes() {
-  const { currentUser } = useCurrentUser()
+  const { currentUser, loading } = useCurrentUser()
+
+  // Show loading state while checking authentication
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
+      </div>
+    )
+  }
 
   if (!currentUser) {
     return (
@@ -44,6 +53,8 @@ function AppRoutes() {
       </Routes>
     )
   }
+
+  console.log('Current user:', currentUser)
 
   return (
     <Layout>
